@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cilim</title>
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" /> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+        integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA=="
+        crossorigin="anonymous" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <link rel="stylesheet" href="CSS/canvas.css">
+</head>
+
+<body>
+    <div id="o_pobjedniku" class="text-center text-light">
+        <h1 class="text-center display-1" id="pobjednik"></h1>
+        <br>
+        <h1 class="display-1" id="winner"></h1>
+        <h1 class="display-5" id="score"> </h1>
+
+        <div class="container col-sm-7" style="margin-top: 20%;">
+            <div class="row">
+                <div class="col-sm-6">
+                    <a type="button" id="igraj-ponovo" onclick="igrajPonovo()" class="btn btn-outline-info ">Igraj
+                        ponovo</a>
+                </div>
+                <div class="col-sm-6">
+                    <a type="button" href="index.html" class="btn btn-outline-warning">Nazad na
+                        meni</a>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <div id="nova-igra-igraci">
+        <div class="container col-sm-4 text-light">
+            <h1 class="display-1 text-center">Canvas 5x5</h1>
+            <form class="form-group mt-5">
+                <div class="container mb-5 text-center">
+                    <img class="" src="https://img.icons8.com/dotty/80/ffffff/add-administrator.png" />
+                </div>
+                <div class="row ">
+                    <div class="col-sm-6 ml-5">
+                        <label for="player1">Igrac 1</label>
+                        <input type="text" id="ime-igraca-1" class="form-control" placeholder="Unesite svoje ime">
+                    </div>
+                    <div class="col-sm-6 ml-5">
+                        <label for="player2">Igrac 2</label>
+                        <input type="text" id="ime-igraca-2" class="form-control" placeholder="Unesite svoje ime">
+                    </div>
+                </div>
+                <div class="row m-auto">
+                    <button type="button" class="btn btn-outline-info mt-3 btn-block" id="potvrdi-igrace">Click</button>
+                </div>
+            </form>
+
+        </div>
+        <div class="flex-container " id="izbornik">
+            <a href="velicina-polja.html" class="m-2 btn btn-outline-warning btn-lg ">Izbor polja</a>
+            <a href="index.html" class="m-2 btn btn-outline-danger btn-lg">Meni</a>
+        </div>
+    </div>
+    <div id="kanvas">
+        <canvas id="canvas"></canvas>
+        <!-- <button class="btn btn-outline-light" onclick="tacke()">Tacke</button> -->
+    </div>
+
+    <div id="content">
+        <div class="flex-container col-sm-12 text-light">
+            <div class="col-sm-6 box1">
+                <h1 id="igrac_1" class="active">Igrac 1</h1>
+                <p style="font-size: 30px;">Score : <span id="igrac1">0</span></p>
+            </div>
+            <div class="col-sm-6 box2">
+                <h1 id="igrac_2">Igrac 2</h1>
+                <p style="font-size: 30px;">Score : <span id="igrac2">0</span></p>
+            </div>
+        </div>
+    </div>
+
+    <div class="flex-container " id="izbornik">
+        <a href="velicina-polja.html" class="m-1 btn btn-outline-warning btn-lg ">Izbor polja</a>
+        <a href="index.html" class="m-1 btn btn-outline-danger btn-lg">Meni</a>
+        <button type="button" class="m-1 btn btn-outline-light btn-lg" id="promijeniImena">Promijeni imena</button>
+    </div>
+    <script src="JS/kanvas5x5.js"></script>
+
+</body>
+
+</html>

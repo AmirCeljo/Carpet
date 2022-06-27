@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Cilim</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+    <link rel="stylesheet" href="CSS/style.css">
+
+
+</head>
+
+<body>
+
+
+
+
+    <!-- Pocetna strana , uvod sa izbornikom -->
+    <div id="uvod">
+
+        <div class="text-center" style="margin-top:3%;">
+            <h1 class="display-1 text-light ">
+                Dobrodosli na igricu Cilim
+            </h1>
+            <h1 class="display-3 text-light ">Sretno !</h1>
+            <img src="CSS/slikeCanvas/pocetna.png" class="mt-5" width="400" height="400" alt="">
+        </div>
+
+
+        <div class="container col-sm-4" style="margin-top:15%" id="upute-predmet-novaigra">
+            <div class="d-flex flex-column">
+                <button type="button" id="upute-igra" class="btn btn-outline-danger btn-lg">Upute o igri</button>
+                <button type="button" id="o-predmetu" class="btn btn-outline-warning mt-2 btn-lg">O predmetu</button>
+                <a href="velicina-polja.html" id="nova-igra" class="btn btn-outline-info mt-2  btn-lg">Nova igra</a>
+            </div>
+        </div>
+
+
+
+    </div>
+    <div class="modal1" id="modal1">
+        <div class="card ">
+            <div class="d-flex bg-danger">
+                <h1>Upute o igri</h1>
+                <span class="span1" onclick="ukloniModal1()"> &times;</span>
+            </div>
+            <section style="font-size:20px;">
+
+                <p class="lead">Igra se sastoji od kvadratića poredanih u obliku "baklave" . Okvir je
+                    označen posebnom bojom, te se igra odvija unutar baklave (ćilima). Dva igrača igraju naizmjenično.
+                </p>
+                <br>
+                <p class="lead">Svaki igrač u svom potezu bira jednu neoznačenu stranu kvadratića.Ukoliko korisnik
+                    označi posljednju neoznačenu stranu kvadratića, <i>zatvara</i> kvadratić i označava ga svojim poljem
+                    Ovo se može desiti samo ukoliko su tri strane već bile označene , te korisnik izabere preostalu
+                    stranu.
+                    Korisnik bira novu neoznačenu stranu sve dok zatvara kvadratiće. Kada korisnik izabere stranu tako
+                    da ne zatvori kvadratić , drugi igrač preuzima potez </p>
+                <br>
+                <p class="lead">Igra se nastavlja sve do momenta kada posljednje polje ne bude označeno. Pobijedio je
+                    igrač koji ima više zatvorenih kvadratića.</p>
+            </section>
+        </div>
+    </div>
+    <div class="modal2" id="modal2">
+        <div class="card">
+            <div class="d-flex bg-warning">
+                <h1>Web programiranje</h1>
+                <span class="span1" onclick="ukloniModal2()"> &times;</span>
+            </div>
+            <section>
+
+                <ul class="navbar-nav" style="font-size:30px;">
+
+                    <li class="nav-item">Predmet: Web programiranje</li>
+                    <li class="nav-item">Profesor: Elmedin Selmanović</li>
+                    <li class="nav-item">Asistent: Eldina Delalić</li>
+                    <li class="nav-item">Studij: Stučni studiji, IT</li>
+                    <li class="nav-item">Ustanova: Prirodno-matematički fakultet</li>
+                    <li class="nav-item">Projekat: Ćilim </li>
+                    <li class="nav-item">Podaci o studentu: Amir Čeljo , amir.celjo2@gmail.com </li>
+                    <li class="nav-item">Mjesto i država: Sarajevo , Bosna i Hercegovina </li>
+
+
+                </ul>
+
+            </section>
+        </div>
+    </div>
+
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+    <!-- Uvod -->
+    <script src="JS/uvod.js"></script>
+
+
+</body>
+
+</html>
